@@ -15,45 +15,74 @@
       width: 28px;
       height: 3px;
       margin: 0 0 5px 0;
-      background:  #fff;
+      background: #fff;
       @include easeOut;
     }
 
     &.menu-true {
-
-    } 
-    &.menu-false {
       transform: rotate(270deg);
-      .btn-line{
-        &:nth-child(1)  {
+      .btn-line {
+        &:nth-child(1) {
           transform: rotate(45deg) translate(5px, 5px);
         }
-        &:nth-child(2)  {
+        &:nth-child(2) {
           opacity: 0;
         }
-        &:nth-child(3)  {
+        &:nth-child(3) {
           transform: rotate(-45deg) translate(7px, -6px);
-
         }
       }
     }
   }
 
-  
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
 
-  // &-branding {
-  //   .portrait {
-  //     width: 250px;
-  //     height: 250px;
-  //     background-repeat: no-repeat;
-  //     background-size: 250px 250px;
-  //     // max-width: 100%;
-  //     // max-height: 100%;
-  //     background-image: url("../../img/brian.jpg");
-  //     background-size: cover; 
-  //     // background-image: url('https://via.placeholder.com/250');
-  //     border-radius: 50%;
-  //     border: solid 3px $secondary-color;
-  //   }
-  // }
+
+    &-branding,
+    &-nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    &-nav {
+      margin: 0;
+      padding: 0;
+      background: darken($primary-color, 5);
+      list-style: none;
+      float: right;
+
+    }
+
+    &-branding {
+      background: $primary-color;
+      float: left;
+      .portrait {
+        width: 250px;
+        height: 250px;
+        opacity: 1;
+        border-radius: 50%;
+        border: solid 3px $secondary-color;
+        background-repeat: no-repeat;
+        background-size: 250px 250px;
+        background-image: url("../../img/brian.jpg");
+        background-size: cover;
+        // &:after {
+        //   content: "";
+        //   background: $primary-color;
+        //   display: relative;
+        //   width: 250px;
+        //   height: 250px;
+        // }
+      }
+    }
+  }
 }
