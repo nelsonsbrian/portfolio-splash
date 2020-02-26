@@ -4,7 +4,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div id="home">
+    <div className="main">
       <h1 className="lg-heading">
         Brian Nelson
         </h1>

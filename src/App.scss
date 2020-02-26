@@ -1,36 +1,112 @@
-$primary_color: rgb(0, 132, 255);
-$secondary_color: rgb(255, 232, 25);
+$primary_color: #444;
+$secondary_color: #eece1a;
 $dark_background: rgba(169, 169, 169, 0.582);
+$show-home-image: true;
+$home-image: url("https://www.fillmurray.com/1920/1080");
+$background-opacity: 0.9;
 
-body {
-  background: $dark_background;
+@mixin easeOut {
+  transition: all 0.5s ease-out;
 }
 
-.header {
-  padding: 5px;
-  
-  &-branding {
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background-repeat: no-repeat;
-      background-size: 250px 250px;
-      // max-width: 100%;
-      // max-height: 100%;
-      background: url('img/brian.jpg');
-      border-radius: 50%;
-      border: solid 3px $secondary-color;
+@mixin background {
+  @if $show-home-image {
+    background: rgba($primary_color, $background-opacity);
+
+    &:after {
+      content: "";
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
 
-#home {
-
-  div {
-
-    a {
-      padding: 20px;
-    }
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@import "stylesheets/components/about";
+@import "stylesheets/components/header";
+@import "stylesheets/components/main";
+@import "stylesheets/components/projects";
+@import "stylesheets/components/body";
+
+* {
+  box-sizing: border-box;
+}
+body > #root > div {
+  height: 100vh;
+}
+#project-root {
+  // height: 100%;
+
+  @include background;
+  color: set-text-color($primary-color);
+  // height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    font-size: 2rem;
+    padding: 0.2rem 1rem;
+    background: rba(lighten($primary_color, 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: $secondary_color;
+}

@@ -7,9 +7,10 @@ import Body from './components/Body';
 function App() {
   return (
     <Router>
-      <Header />
-      <Body/>
-      </Router>
+      <div id="project-root">
+        <Body />
+      </div>
+    </Router>
   );
 }
 
