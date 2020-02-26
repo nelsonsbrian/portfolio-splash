@@ -41,7 +41,6 @@
     width: 100%;
     opacity: 0.9;
 
-
     &-branding,
     &-nav {
       display: flex;
@@ -60,6 +59,26 @@
       list-style: none;
       float: right;
 
+      .nav-item {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 500;
+        text-decoration: none;
+
+        .nav-link {
+          color: #fff;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+
+        .active {
+          color: $secondary-color;
+        }
+      }
     }
 
     &-branding {

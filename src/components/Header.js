@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Transition, Trail } from 'react-spring/renderprops'
+import { NavLink } from 'react-router-dom';
+import { Transition } from 'react-spring/renderprops'
 import { useTrail, animated } from 'react-spring'
 
 const Header = () => {
@@ -15,29 +15,26 @@ const Header = () => {
     )
   }
 
-  const links = [
-    <Link className="nav-link" to="/">Home</Link>,
-    <Link to="/about" className="nav-link">About</Link>,
-    <Link to="/projects" className="nav-link">Projects</Link>,
-  ];
-  const slideRight = useTrail(links.length, {
-    from: { transform: 'translate3d(600px, 0, 0)' },
-    to: { transform: 'translate3d(0, 0, 0)' }
-  })
 
   function Nav() {
+    const links = [
+      <NavLink exact activeClassName="active" className="nav-link" to="/">Home</NavLink>,
+      <NavLink to="/about" activeClassName="active" className="nav-link">About</NavLink>,
+      <NavLink to="/projects" activeClassName="active" className="nav-link">Projects</NavLink>,
+    ];
+    const slideRight = useTrail(links.length, {
+      from: { transform: 'translate3d(600px, 0, 0)' },
+      to: { transform: 'translate3d(0, 0, 0)' }
+    })
     return (
-      <ul className={`menu-nav menu-${menuOpen}`}>
+      <ul className={`menu-nav`}>
         {slideRight.map((props, index) => {
           return (
             <animated.div
               key={index}
               style={props}
-              className="box"
-            >
-              <li style={props} className={`nav-item menu-${menuOpen}`}>
-                {links[index]}
-              </li>
+              className="nav-item">
+              {links[index]}
             </animated.div>
           );
         })}
