@@ -9,6 +9,10 @@ const Home = () => {
       <h2 className="sm-heading">
         Full-Stack Developer
         </h2>
+      <h2 className="sm-heading-sec">
+        JavaScript <span className="white">&bull;</span> NodeJS <span className="white">&bull;</span> React
+        </h2>
+
       <div className="icons">
         <a href="https://www.linkedin.com/in/nelsonsbrian/">
           <i className="fab fa-linkedin fa-2x"></i>
@@ -19,6 +23,7 @@ const Home = () => {
         <a href="https://gitlab.com/nelsonsbrian">
           <i className="fab fa-gitlab fa-2x"></i>
         </a>
+
       </div>
     </div>);
 }

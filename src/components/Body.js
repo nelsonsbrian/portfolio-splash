@@ -7,7 +7,7 @@ import About from './About';
 
 const Body = () => {
   return (
-    <div>
+    <div className="body-container">
       <Header />
       <Route exact path="/" component={Main} />
       <Route exact path="/projects" component={Projects} />

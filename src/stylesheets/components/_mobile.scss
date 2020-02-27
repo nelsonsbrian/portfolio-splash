@@ -1,16 +1,26 @@
 @include mediaXl {
+  // .body-container {
+  //   margin: 0 300px;
+  // }
+
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
+  // .body-container {
+  //   margin: 0 100px;
+  // }
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
   .main {
-    align-items: center;
-    text-align: center;
-
     .lg-heading {
       font-size: 60px;
       line-height: 1;
@@ -22,6 +32,9 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+
+    align-items: center;
+    text-align: center;
   }
 
   .header {
@@ -53,34 +66,48 @@
   #about {
     .about-info {
       grid-template-areas:
-        // "bioimage"
+        "bioimage"
         "bio"
         "job1"
         "job2"
         "job3";
       grid-template-columns: 1fr;
 
-      .portrait {
+      .bio-photo {
+        width: 150px;
+        height: 150px;
       }
+    }
+  }
 
-      .bio {
-      }
+  grid-template-columns: auto repeat(3, 1fr) auto;
+  #work {
+    .lg-heading {
+      font-size: 60px;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
 
-      .job-1 {
-      }
+    .sm-heading {
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
 
-      .job-2 {
-      }
+    align-items: center;
+    text-align: center;
 
-      .job-3 {
-      }
-
-      .job {
-      }
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
 // Smartphones
 @include mediaSm {
+  #work {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+  }
 }

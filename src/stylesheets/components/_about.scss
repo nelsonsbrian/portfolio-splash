@@ -15,10 +15,10 @@
       "job1 job2 job3";
     grid-template-columns: repeat(3, 1fr);
 
-    .portrait {
+    .bio-photo {
       grid-area: bioimage;
-      width: 150px;
-      height: 150px;
+      width: 250px;
+      height: 250px;
       margin: auto;
       background-image: url("../../img/brian.jpg");
       background-size: cover;
@@ -47,6 +47,9 @@
       background: lighten($primary-color, 5);
       padding: 0.5rem;
       border-bottom: $secondary-color 5px solid;
+      border-top: $secondary-color 5px solid;
+      border-left: set-text-color($primary-color) 1px solid;
+      border-right: set-text-color($primary-color) 1px solid;
 
     }
   }

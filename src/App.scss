@@ -59,7 +59,6 @@ $background-opacity: 0.9;
   }
 }
 
-
 // Set Text Color
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
@@ -107,6 +106,12 @@ h3 {
     font-size: 2rem;
     padding: 0.2rem 1rem;
     background: rba(lighten($primary_color, 2), 0.5);
+
+    &-sec {
+      color: $secondary_color;
+      font-size: 2rem;
+      padding: 0.2rem 1rem;
+    }
   }
 }
 
@@ -118,7 +123,5 @@ a {
 .text-secondary {
   color: $secondary_color;
 }
-
-
 
 @import "stylesheets/components/mobile";

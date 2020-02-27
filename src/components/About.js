@@ -11,7 +11,7 @@ export default function About() {
         Let me tell you a few things...
     </h2>
       <div className="about-info">
-        <div className="portrait"></div>
+        <div className="bio-photo"></div>
 
         <div className="bio">
           <h3 className="text-secondary">BIO</h3>

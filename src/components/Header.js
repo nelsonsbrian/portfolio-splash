@@ -32,6 +32,9 @@ const Header = () => {
         onClick={() => setMenuOpen(false)}
         className="nav-link">Projects
         </NavLink>,
+      <div>
+        <a href="https://pdfhost.io/v/Z~g87ZYW_Brian_Nelson_Resumepdf.pdf">My Resume</a>
+      </div>
     ];
     const slideRight = useTrail(links.length, {
       from: { transform: 'translate3d(600px, 0, 0)' },
