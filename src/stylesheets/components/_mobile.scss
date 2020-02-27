@@ -1,0 +1,86 @@
+@include mediaXl {
+}
+
+// Desktops & Laptops
+@include mediaLg {
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  .main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      font-size: 60px;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .sm-heading {
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .header {
+    .menu {
+      position: static;
+
+      &-branding,
+      &-nav {
+        float: none;
+        width: 100%;
+        min-height: 0;
+        flex-direction: column;
+      }
+
+      &-branding {
+        height: 25vh;
+      }
+      &-nav {
+        height: 75vh;
+      }
+
+      .portrait {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  #about {
+    .about-info {
+      grid-template-areas:
+        // "bioimage"
+        "bio"
+        "job1"
+        "job2"
+        "job3";
+      grid-template-columns: 1fr;
+
+      .portrait {
+      }
+
+      .bio {
+      }
+
+      .job-1 {
+      }
+
+      .job-2 {
+      }
+
+      .job-3 {
+      }
+
+      .job {
+      }
+    }
+  }
+}
+
+// Smartphones
+@include mediaSm {
+}

@@ -1,0 +1,53 @@
+#about {
+  padding: 2rem 4rem 4rem 4rem;
+  height: 100%;
+  overflow: hidden;
+
+  h2.sm-heading {
+    margin-bottom: 10px;
+  }
+
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+      "bioimage bio bio"
+      "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+
+    .portrait {
+      grid-area: bioimage;
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      background-image: url("../../img/brian.jpg");
+      background-size: cover;
+      border-radius: 50%;
+      border: $secondary-color 3px solid;
+    }
+
+    .bio {
+      grid-area: bio;
+      font-size: 1.5rem;
+    }
+
+    .job-1 {
+      grid-area: job1;
+    }
+
+    .job-2 {
+      grid-area: job2;
+    }
+
+    .job-3 {
+      grid-area: job3;
+    }
+
+    .job {
+      background: lighten($primary-color, 5);
+      padding: 0.5rem;
+      border-bottom: $secondary-color 5px solid;
+
+    }
+  }
+}

@@ -9,8 +9,7 @@ const Body = () => {
   return (
     <div>
       <Header />
-      <Main />
-      {/* <Route path="/" component={Main} /> */}
+      <Route exact path="/" component={Main} />
       <Route exact path="/projects" component={Projects} />
       <Route exact path="/about" component={About} />
     </div>

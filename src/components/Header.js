@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Transition } from 'react-spring/renderprops'
-import { useTrail, animated } from 'react-spring'
+import { Transition } from 'react-spring/renderprops';
+import { useTrail, animated } from 'react-spring';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,12 +15,23 @@ const Header = () => {
     )
   }
 
-
   function Nav() {
     const links = [
-      <NavLink exact activeClassName="active" className="nav-link" to="/">Home</NavLink>,
-      <NavLink to="/about" activeClassName="active" className="nav-link">About</NavLink>,
-      <NavLink to="/projects" activeClassName="active" className="nav-link">Projects</NavLink>,
+      <NavLink to="/" exact
+        activeClassName="active"
+        onClick={() => setMenuOpen(false)}
+        className="nav-link">Home
+        </NavLink>,
+      <NavLink to="/about"
+        activeClassName="active"
+        onClick={() => setMenuOpen(false)}
+        className="nav-link">About
+        </NavLink>,
+      <NavLink to="/projects"
+        activeClassName="active"
+        onClick={() => setMenuOpen(false)}
+        className="nav-link">Projects
+        </NavLink>,
     ];
     const slideRight = useTrail(links.length, {
       from: { transform: 'translate3d(600px, 0, 0)' },
@@ -39,7 +50,7 @@ const Header = () => {
           );
         })}
       </ul>
-    )
+    );
   }
 
 

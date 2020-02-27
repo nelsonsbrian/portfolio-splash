@@ -1,8 +1,10 @@
+// $primary_color: rgb(238, 220, 220);
 $primary_color: #444;
 $secondary_color: #eece1a;
 $dark_background: rgba(169, 169, 169, 0.582);
 $show-home-image: true;
-$home-image: url("https://www.fillmurray.com/1920/1080");
+$home-image: url("img/background.jpg");
+// $home-image: url("https://www.fillmurray.com/1920/1080");
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -11,34 +13,6 @@ $background-opacity: 0.9;
 
 @mixin easeIn {
   transition: all 0.5s ease-in;
-}
-
-@mixin background {
-  @if $show-home-image {
-    background: rgba($primary_color, $background-opacity);
-
-    &:after {
-      content: "";
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
 }
 
 // Media Query Mixins
@@ -66,6 +40,35 @@ $background-opacity: 0.9;
   }
 }
 
+@mixin background {
+  @if $show-home-image {
+    background: rgba($primary_color, $background-opacity);
+
+    &:after {
+      content: "";
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 @import "stylesheets/components/about";
 @import "stylesheets/components/header";
 @import "stylesheets/components/main";
@@ -76,7 +79,8 @@ $background-opacity: 0.9;
   box-sizing: border-box;
 }
 body > #root > div {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 #project-root {
   // height: 100%;
@@ -107,10 +111,14 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
 .text-secondary {
   color: $secondary_color;
 }
+
+
+
+@import "stylesheets/components/mobile";
