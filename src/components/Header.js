@@ -33,7 +33,7 @@ const Header = () => {
         className="nav-link">Projects
         </NavLink>,
       <div>
-        <a href="https://pdfhost.io/v/Z~g87ZYW_Brian_Nelson_Resumepdf.pdf">My Resume</a>
+        <a target="_blank" href="https://pdfhost.io/v/Z~g87ZYW_Brian_Nelson_Resumepdf.pdf">My Resume</a>
       </div>
     ];
     const slideRight = useTrail(links.length, {
