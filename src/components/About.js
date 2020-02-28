@@ -15,7 +15,7 @@ export default function About() {
 
         <div className="bio">
           <h3 className="bio-heading text-secondary-color">BIO</h3>
-          <p>As an experienced technologist with nearly a decade of coding scripts and creating  end-consumer interfaces, I love the process of delivering high quality projects that leave  team members and consumer with a need satisfied. I am looking for a role where I can  technical and team building skills to use and further absorb newer technologies.</p>
+          <p> As an experienced technologist with nearly a decade of coding scripts and creating end-consumer interfaces, I love the process of delivering high quality projects that leave team members and consumers with a need satisfied. I am looking for a role where I can utilize my technical and team building skills to use and further absorb newer technologies.</p>
         </div>
 
         <div className="job job-1">
