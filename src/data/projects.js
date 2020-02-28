@@ -12,7 +12,7 @@ export const ProjectData = [
     name: "Marvel Heroes",
     description: "A game combining 9 regular games of tic-tac-toe, albeit with new rules.",
     projectLink: 'https://projects.nelsonsbrian.com/marvel-combat',
-    githubLink: 'https://projects.nelsonsbrian.com/marvel-combat/',
+    githubLink: 'https://github.com/nelsonsbrian/Marvel-Combat',
     image: 'marvelScreen2.png',
     technologies: ['JavaScript', 'HTML', 'CSS', 'P5']
   },
