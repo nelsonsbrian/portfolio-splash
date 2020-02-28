@@ -5,7 +5,7 @@ export default function About() {
     <div id="about">
       <h1 className="lg-heading">
         About
-      <span className="text-secondary">Me</span>
+      <span className="text-secondary-color">Me</span>
       </h1>
       <h2 className="sm-heading">
         Let me tell you a few things...
@@ -14,7 +14,7 @@ export default function About() {
         <div className="bio-photo"></div>
 
         <div className="bio">
-          <h3 className="text-secondary">BIO</h3>
+          <h3 className="text-secondary-color">BIO</h3>
           <p>As an experienced technologist with nearly a decade of coding scripts and creating  end-consumer interfaces, I love the process of delivering high quality projects that leave  team members and consumer with a need satisfied. I am looking for a role where I can  technical and team building skills to use and further absorb newer technologies</p>
         </div>
 

@@ -1,21 +1,9 @@
 @include mediaXl {
-  // .body-container {
-  //   margin: 0 300px;
-  // }
-
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
-  // .body-container {
-  //   margin: 0 100px;
-  // }
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
 }
 
 // Tablets & Small Laptops
@@ -97,17 +85,17 @@
     align-items: center;
     text-align: center;
 
-    .projects {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 }
 
 // Smartphones
 @include mediaSm {
   #work {
-    .projects {
-      grid-template-columns: 1fr;
+    padding: 45px;
+
+    .card {
+      max-width: 250px;
+      min-width: 250px;
     }
   }
 }
