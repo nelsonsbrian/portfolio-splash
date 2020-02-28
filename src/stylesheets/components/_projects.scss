@@ -2,92 +2,100 @@
   padding: 4rem;
   height: 100%;
   overflow: hidden;
-}
 
-// Work/Projects
-.projects {
-  margin-top: 30px;
-
-  .card {
+  h1.lg-heading {
     margin-top: 30px;
-    margin-bottom: 30px;
-    max-width: 350px;
-    min-width: 350px;
-    // border-bottom: 7px solid $secondary-color;
-    // border-top: 1px solid $secondary-color;
-    // border-right: 1px solid $secondary-color;
-    // border-left: 1px solid $secondary-color;
-    box-shadow: $secondary-color 0px 0px 15px 5px;
-    padding:5px;
-    background: lighten($primary-color, 10);
+  }
 
-    &-title {
-      color: $secondary-color;
-      font-size: 1.8rem;
-      text-align: center;
-      font-weight: 600;
-      margin-bottom: .9rem;
-    }
+  h2.sm-heading {
+    margin-top: 25px;
+  }
 
-    &-body {
+  // Work/Projects
+  .projects {
+    margin-top: 30px;
+
+    .card {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 350px;
+      min-width: 350px;
+      box-shadow: $secondary-color 0px 0px 15px 5px;
+      padding: 5px;
       background: lighten($primary-color, 10);
-      color: set-text-color($primary-color);
-      border-bottom: 3px solid $secondary-color;
-      padding-top: 10px;
+
+      &-title {
+        color: $secondary-color;
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 0.9rem;
+      }
+
+      &-body {
+        background: lighten($primary-color, 10);
+        color: set-text-color($primary-color);
+        border-bottom: 3px solid $secondary-color;
+        padding-top: 10px;
+      }
+
+      &-text {
+        text-align: center;
+        font-weight: 500;
+      }
+      .project-description {
+        min-height: 75px;
+      }
+      .project-technologies {
+        .technology {
+          color: $secondary-color;
+          padding: 0 10px;
+          .tech {
+            width: 100%;
+          }
+        }
+      }
     }
 
-    &-text {
-      text-align: center;
-      font-weight: 500;
-    }
-    .project-description {
-      min-height: 75px;
-    }
-    .project-technologies {
-      .technology {
-        color: $secondary-color;
-        padding: 0 10px;
+    img {
+      width: 100%;
+      min-height: 320px;
+      max-height: 320px;
+      cursor: pointer;
+      border-radius: 0.3rem;
+      @include easeIn;
+
+      &:hover {
+        opacity: 0.8;
+        padding: 0.7rem 0.7rem;
+        @include easeOut;
       }
     }
   }
 
-  img {
-    width: 100%;
-    min-height: 320px;
-    max-height: 320px;
-    cursor: pointer;
-    border-radius: 0.3rem;
-
+  // Button Styles
+  .btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    // margin-bottom: 0.3rem;
     &:hover {
-      opacity: 0.8;
-      // background: $secondary-color;
-      // border-color: $secondary-color;
-      padding: 0.7rem 0.7rem;
-      @include easeOut;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
     }
   }
-}
 
-// Button Styles
-.btn {
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  // margin-bottom: 0.3rem;
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
+  .btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
   }
-}
 
-.btn-dark {
-  @extend .btn;
-  background: darken($primary-color, 50);
-  color: #fff;
-}
-
-.btn-light {
-  @extend .btn;
-  background: lighten($primary-color, 50);
-  color: #333;
+  .btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
+  }
 }

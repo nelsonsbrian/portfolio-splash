@@ -3,13 +3,33 @@
 
 // Desktops & Laptops
 @include mediaLg {
+  #about {
+    .about-info {
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "job1"
+        "job2"
+        "job3";
+      grid-template-columns: 1fr;
+    }
+  }
 
+  #nav-header {
+    height: 60px;
+    .menu-nav {
+      .nav-link {
+        font-size: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
   .main {
-    .lg-heading {
+    h1.lg-heading {
       font-size: 60px;
       line-height: 1;
       margin-bottom: 1rem;
@@ -23,6 +43,17 @@
 
     align-items: center;
     text-align: center;
+
+    .tech-stacks {
+      line-height: 0.75;
+      .stack {
+        display: block;
+        width: 100%;
+      }
+      .dot {
+        visibility: hidden;
+      }
+    }
   }
 
   .header {
@@ -52,6 +83,17 @@
   }
 
   #about {
+    padding: 2rem 2rem 2rem 2rem;
+
+    h1.lg-heading {
+      font-size: 60px;
+      margin-top: 60px;
+    }
+
+    h2.sm-heading {
+      padding-left: 0px;
+    }
+
     .about-info {
       grid-template-areas:
         "bioimage"
@@ -60,11 +102,6 @@
         "job2"
         "job3";
       grid-template-columns: 1fr;
-
-      .bio-photo {
-        width: 150px;
-        height: 150px;
-      }
     }
   }
 
@@ -80,22 +117,42 @@
       font-size: 24px;
       line-height: 1;
       margin-bottom: 1rem;
+      padding-left: 0px;
     }
 
     align-items: center;
     text-align: center;
-
   }
 }
 
 // Smartphones
 @include mediaSm {
   #work {
-    padding: 45px;
+    padding: 20px;
+    h1.lg-heading {
+      margin-top: 60px;
+    }
 
     .card {
-      max-width: 250px;
-      min-width: 250px;
+      max-width: 300px;
+      min-width: 300px;
+    }
+  }
+
+  .main {
+    .tech-stacks {
+      .stack {
+        font-size: 22px;
+      }
+    }
+  }
+
+  #about {
+    .about-info {
+      .bio-photo {
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 }

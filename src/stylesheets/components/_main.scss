@@ -3,24 +3,11 @@
   height: 100%;
   overflow: hidden;
 
-  .icons {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    a {
-      padding: 0.4rem;
-      color: set-text-color($primary-color);
-      &:hover {
-        color: $secondary-color;
-        @include easeOut();
-      }
-    }
-  }
-
   h1 {
     margin-top: 20vh;
   }
 
-  .white {
+  .dot {
     color: #fff;
   }
 }

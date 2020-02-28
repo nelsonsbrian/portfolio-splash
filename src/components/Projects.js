@@ -17,7 +17,7 @@ const ProjectCard = ({ proj }) => {
           {description} <br />
         </Card.Text>
         <Card.Text className='project-technologies'>
-          {technologies.map(tech => <span className="technology">{tech}</span>)}
+          {technologies.map(tech => <span key={tech} className="technology">{tech}</span>)}
         </Card.Text>
       </Card.Body>
       <Button className="btn-light" href={projectLink} target="_blank">

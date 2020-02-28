@@ -1,0 +1,31 @@
+.icons {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  a {
+    padding: 0.4rem;
+    color: set-text-color($primary-color);
+    &:hover {
+      color: $secondary-color;
+      @include easeOut();
+    }
+  }
+}
+
+#nav-header {
+  .icons {
+    display: inline;
+    float: right;
+    a {
+      margin-right: .6rem;
+    }
+  }
+}
+
+.header {
+  .icons {
+    a {
+      margin-right: 1.6rem;
+
+    }
+  }
+}

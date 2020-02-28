@@ -1,4 +1,5 @@
 import React from 'react';
+import Icons from './Icons';
 
 const Home = () => {
   return (
@@ -9,22 +10,16 @@ const Home = () => {
       <h2 className="sm-heading">
         Full-Stack Developer
         </h2>
-      <h2 className="sm-heading-sec">
-        JavaScript <span className="white">&bull;</span> NodeJS <span className="white">&bull;</span> React
-        </h2>
+      <h2 className="tech-stacks sm-heading-sec">
+        <span className="stack">JavaScript</span>
+        <span className="dot"> &bull; </span>
+        <span className="stack">NodeJS</span>
+        <span className="dot"> &bull; </span>
+        <span className="stack">React</span>
+      </h2>
 
-      <div className="icons">
-        <a href="https://www.linkedin.com/in/nelsonsbrian/">
-          <i className="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="https://github.com/nelsonsbrian">
-          <i className="fab fa-github fa-2x"></i>
-        </a>
-        <a href="https://gitlab.com/nelsonsbrian">
-          <i className="fab fa-gitlab fa-2x"></i>
-        </a>
+      <Icons/>
 
-      </div>
     </div>);
 }
 

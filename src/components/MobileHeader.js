@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Transition } from 'react-spring/renderprops';
 import { useTrail, animated } from 'react-spring';
+import Icons from './Icons';
 
-const Header = () => {
+const MobileHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
 
@@ -34,6 +35,9 @@ const Header = () => {
         </NavLink>,
       <div>
         <a target="_blank" href="https://pdfhost.io/v/Z~g87ZYW_Brian_Nelson_Resumepdf.pdf">My Resume</a>
+      </div>,
+      <div className="nav-icons">
+        <Icons size='1'/>
       </div>
     ];
     const slideRight = useTrail(links.length, {
@@ -42,6 +46,7 @@ const Header = () => {
     })
     return (
       <ul className={`menu-nav`}>
+        <div className="nav-item header-name">Brian Nelson</div>
         {slideRight.map((props, index) => {
           return (
             <animated.div
@@ -92,4 +97,4 @@ const Header = () => {
     </nav>);
 }
 
-export default Header;
+export default MobileHeader;

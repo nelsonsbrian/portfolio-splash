@@ -3,13 +3,22 @@
   height: 100%;
   overflow: hidden;
 
+  h1.lg-heading {
+    margin-top: 60px;
+  }
+
   h2.sm-heading {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+  }
+
+  h3.bio-heading {
+    font-weight: 500;
+    font-size: 40px;
   }
 
   .about-info {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 50px 30px;
     grid-template-areas:
       "bioimage bio bio"
       "job1 job2 job3";
@@ -23,6 +32,7 @@
       background-image: url("../../img/brian.jpg");
       background-size: cover;
       border-radius: 50%;
+      background-position: 0px -10px;
       border: $secondary-color 3px solid;
     }
 
@@ -44,13 +54,24 @@
     }
 
     .job {
+      margin: auto;
       background: lighten($primary-color, 5);
       padding: 0.5rem;
       border-bottom: $secondary-color 5px solid;
       border-top: $secondary-color 5px solid;
       border-left: set-text-color($primary-color) 1px solid;
       border-right: set-text-color($primary-color) 1px solid;
+      width: 250px;
 
+      &-title {
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      &-position {
+        font-size: 20px;
+        color: $secondary-color;
+      }
     }
   }
 }
