@@ -11,7 +11,7 @@ export const ProjectData = [
   },
   {
     name: "Marvel Heroes",
-    description: "A game combining 9 regular games of tic-tac-toe, albeit with new rules.",
+    description: "A 2-player game that allow you to pit your favorite Marvel Studios superheroes against each other in a Mortal Combat style game.",
     projectLink: 'https://projects.nelsonsbrian.com/marvel-combat',
     githubLink: 'https://github.com/nelsonsbrian/Marvel-Combat',
     image: 'marvelScreen2.png',
