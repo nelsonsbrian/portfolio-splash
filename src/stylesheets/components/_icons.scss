@@ -16,16 +16,17 @@
     display: inline;
     float: right;
     a {
-      margin-right: .6rem;
+      margin-right: 0.6rem;
     }
   }
 }
 
 .header {
   .icons {
+    margin-top: 0px;
+    margin-bottom: 90px;
     a {
       margin-right: 1.6rem;
-
     }
   }
 }
