@@ -72,6 +72,7 @@
         height: 25vh;
       }
       &-nav {
+        padding-bottom: 20vh;
         height: 75vh;
       }
 
@@ -129,17 +130,33 @@
 @include mediaSm {
   #work {
     padding: 20px;
+
     h1.lg-heading {
       margin-top: 60px;
+      text-align: center;
     }
 
-    .card {
-      max-width: 300px;
-      min-width: 300px;
+    .sm-heading {
+      text-align: center;
+    }
+
+    .projects {
+      .card {
+        max-width: 280px;
+        min-width: 280px;
+      }
     }
   }
 
   .main {
+    padding-left: 0px;
+    padding-right: 0px;
+
+    h1.lg-heading {
+      font-size: 45px;
+      // margin-top: 5vh;
+    }
+
     .tech-stacks {
       .stack {
         font-size: 22px;
@@ -148,10 +165,27 @@
   }
 
   #about {
+    h1.lg-heading {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .sm-heading {
+      text-align: center;
+    }
+
     .about-info {
       .bio-photo {
         width: 150px;
         height: 150px;
+      }
+    }
+  }
+
+  .header {
+    .menu {
+      &-nav {
+        padding-bottom: 0px;
       }
     }
   }

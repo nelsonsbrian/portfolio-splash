@@ -20,7 +20,7 @@ export const ProjectData = [
   },
   {
     name: "Minesweeper",
-    description: "Class Game of Minesweeper. Avoid the bombs!",
+    description: "Classic Game of Minesweeper. Avoid the bombs!",
     projectLink: 'https://projects.nelsonsbrian.com/minesweeper',
     githubLink: 'https://github.com/nelsonsbrian/MineSweeperAngular',
     image: 'minesweeper2.png',
