@@ -34,7 +34,10 @@ const MobileHeader = () => {
         className="nav-link">Projects
         </NavLink>,
       <div>
-        <a target="_blank" href="https://pdfhost.io/v/Z~g87ZYW_Brian_Nelson_Resumepdf.pdf">My Resume</a>
+      <a className="nav-link" target="_blank
+      " href="/files/Brian_Nelson_Resume.pdf" target="_blank">
+        Resume
+      </a>
       </div>,
       <div className="nav-icons">
         <Icons size='1'/>

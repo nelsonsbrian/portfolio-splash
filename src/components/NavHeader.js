@@ -22,8 +22,8 @@ const NavHeader = () => {
         className="nav-link">Projects
         </NavLink>,
       <a className="nav-link" target="_blank
-      " href="https://pdfhost.io/v/Z~g87ZYW_Brian_Nelson_Resumepdf.pdf">
-        Download-Resume
+      " href="/files/Brian_Nelson_Resume.pdf" target="_blank">
+        Resume
       </a>
     ];
 
