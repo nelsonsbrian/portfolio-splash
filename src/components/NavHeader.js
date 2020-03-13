@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Transition } from 'react-spring/renderprops';
-import { useTrail, animated } from 'react-spring';
 import Icons from './Icons';
 
 const NavHeader = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
 
   function Nav() {
     const links = [
@@ -22,7 +19,7 @@ const NavHeader = () => {
         className="nav-link">Projects
         </NavLink>,
       <a className="nav-link" target="_blank
-      " href="/files/Brian_Nelson_Resume.pdf" target="_blank">
+      " href="/files/Brian_Nelson_Resume.pdf">
         Resume
       </a>
     ];
@@ -36,7 +33,7 @@ const NavHeader = () => {
             </span>
           );
         })}
-        <Icons/>
+        <Icons />
       </ul>
     );
   }

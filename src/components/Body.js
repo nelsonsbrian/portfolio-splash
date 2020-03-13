@@ -5,7 +5,6 @@ import MobileHeader from './MobileHeader';
 import NavHeader from './NavHeader';
 import Projects from './Projects';
 import About from './About';
-import MediaQuery from 'react-responsive';
 import { useMediaQuery } from 'react-responsive';
 const Body = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });

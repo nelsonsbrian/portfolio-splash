@@ -35,7 +35,7 @@ const MobileHeader = () => {
         </NavLink>,
       <div>
       <a className="nav-link" target="_blank
-      " href="/files/Brian_Nelson_Resume.pdf" target="_blank">
+      " href="/files/Brian_Nelson_Resume.pdf">
         Resume
       </a>
       </div>,
