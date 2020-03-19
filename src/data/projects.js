@@ -18,6 +18,15 @@ export const ProjectData = [
     techIcons: ['fab fa-js', 'fab fa-react', null],
   },
   {
+    name: "Analog Clock",
+    description: "Quick and easy analog clock that shows the date and time. It's made with React and CSS. The motion uses setInterval and CSS translate/rotate.",
+    projectLink: 'https://projects.nelsonsbrian.com/clock',
+    githubLink: 'https://github.com/nelsonsbrian/clock',
+    image: 'clock.png',
+    technologies: ['React', 'CSS',],
+    techIcons: [],
+  },
+  {
     name: "Marvel Heroes",
     description: "A 2-player game that allow you to pit your favorite Marvel Studios superheroes against each other in a Mortal Combat style game.",
     projectLink: 'https://projects.nelsonsbrian.com/marvel-combat',
