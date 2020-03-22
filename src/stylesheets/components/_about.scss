@@ -4,7 +4,7 @@
   overflow: hidden;
   margin: auto;
   max-width: 1100px;
-  
+
   h1.lg-heading {
     margin-top: 60px;
   }
@@ -21,32 +21,21 @@
   .about-info {
     display: block;
 
-    // grid-gap: 50px 30px;
-    // grid-template-areas:
-    //   "bioimage bio bio"
-    //   "job1 job2 job3";
-    // grid-template-columns: repeat(3, 1fr);
-
     .bio {
       font-size: 1.5rem;
     }
 
     .job {
-      // display: flex;
-      // flex-wrap: wrap;
-      // align-items: center;
       &-card {
         display: flex;
         min-height: 200px;
         max-width: 1100px;
         margin-bottom: 30px;
         background: lighten($primary-color, 5);
-        // padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
         border-top: $secondary-color 5px solid;
         border-left: set-text-color($primary-color) 1px solid;
         border-right: set-text-color($primary-color) 1px solid;
-        // width: 100%;
       }
 
       &-header {
@@ -55,7 +44,6 @@
         flex: 1;
         align-items: center;
         justify-content: center;
-        // width: 200px;
         min-width: 230px;
         background: darken($primary-color, 1.5);
       }
@@ -65,15 +53,17 @@
         display: flex;
         flex-wrap: wrap;
         border-left: $secondary-color 3px solid;
-        // height: 100%;
         overflow: hidden;
-
+        padding-bottom: 10px;
         .job-points {
           line-height: 1.8;
           list-style: none;
           padding: 0 15px 0 0;
           margin-top: 5px;
           margin-bottom: 0;
+          width: 100%;
+          background: lighten($primary-color, 2);
+          box-shadow: lighten($primary-color, 2) 0px 0px 15px 5px;
           li {
             padding-left: 2.8em;
             background: url("../../img/arrow.png") no-repeat left 5px;
@@ -87,9 +77,12 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
+          align-content: center;
           width: 100%;
           padding: 10px 0;
           .technology {
+            background: lighten($primary-color, 2);
+            box-shadow: lighten($primary-color, 2) 0px 0px 15px 5px;
             color: $secondary-color;
             font-size: 20px;
             font-weight: 500;

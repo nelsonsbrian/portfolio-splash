@@ -16,14 +16,14 @@ const JobCard = ({ job }) => {
         <h6 className="job-position">{title}</h6>
       </div>
       <div className="job-content">
+        <div className="job-technologies">
+          {technologies.map(tech => <span key={tech} className="technology">{tech}</span>)}
+        </div>
         <ul className="job-points">
           {points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
         </ul>
-        <div className="job-technologies">
-          {technologies.map(tech => <span key={tech} className="technology">{tech}</span>)}
-        </div>
       </div>
 
     </div>
