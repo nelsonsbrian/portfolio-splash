@@ -2,7 +2,9 @@
   padding: 2rem 4rem 4rem 4rem;
   height: 100%;
   overflow: hidden;
-
+  margin: auto;
+  max-width: 1100px;
+  
   h1.lg-heading {
     margin-top: 60px;
   }
@@ -17,60 +19,106 @@
   }
 
   .about-info {
-    display: grid;
-    grid-gap: 50px 30px;
-    grid-template-areas:
-      "bioimage bio bio"
-      "job1 job2 job3";
-    grid-template-columns: repeat(3, 1fr);
+    display: block;
 
-    .bio-photo {
-      grid-area: bioimage;
-      width: 250px;
-      height: 250px;
-      margin: auto;
-      background-image: url("../../img/brian.jpg");
-      background-size: cover;
-      border-radius: 50%;
-      background-position: 0px -10px;
-      border: $secondary-color 3px solid;
-    }
+    // grid-gap: 50px 30px;
+    // grid-template-areas:
+    //   "bioimage bio bio"
+    //   "job1 job2 job3";
+    // grid-template-columns: repeat(3, 1fr);
 
     .bio {
-      grid-area: bio;
       font-size: 1.5rem;
     }
 
-    .job-1 {
-      grid-area: job1;
-    }
-
-    .job-2 {
-      grid-area: job2;
-    }
-
-    .job-3 {
-      grid-area: job3;
-    }
-
     .job {
-      margin: auto;
-      background: lighten($primary-color, 5);
-      padding: 0.5rem;
-      border-bottom: $secondary-color 5px solid;
-      border-top: $secondary-color 5px solid;
-      border-left: set-text-color($primary-color) 1px solid;
-      border-right: set-text-color($primary-color) 1px solid;
-      width: 250px;
+      // display: flex;
+      // flex-wrap: wrap;
+      // align-items: center;
+      &-card {
+        display: flex;
+        min-height: 200px;
+        max-width: 1100px;
+        margin-bottom: 30px;
+        background: lighten($primary-color, 5);
+        // padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+        border-top: $secondary-color 5px solid;
+        border-left: set-text-color($primary-color) 1px solid;
+        border-right: set-text-color($primary-color) 1px solid;
+        // width: 100%;
+      }
+
+      &-header {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        // width: 200px;
+        min-width: 230px;
+        background: darken($primary-color, 1.5);
+      }
+
+      &-content {
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+        border-left: $secondary-color 3px solid;
+        // height: 100%;
+        overflow: hidden;
+
+        .job-points {
+          line-height: 1.8;
+          list-style: none;
+          padding: 0 15px 0 0;
+          margin-top: 5px;
+          margin-bottom: 0;
+          li {
+            padding-left: 2.8em;
+            background: url("../../img/arrow.png") no-repeat left 5px;
+            background-position: 15px 5px;
+            background-size: 20px 20px;
+          }
+        }
+
+        .job-technologies {
+          text-align: center;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 100%;
+          padding: 10px 0;
+          .technology {
+            color: $secondary-color;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0 10px;
+          }
+        }
+      }
 
       &-title {
         margin-bottom: 10px;
         font-weight: 500;
+        width: 100%;
+        text-align: center;
+      }
+
+      &-img-container {
+        width: 100%;
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          height: 50px;
+        }
       }
 
       &-position {
         font-size: 20px;
         color: $secondary-color;
+        text-align: center;
       }
     }
   }

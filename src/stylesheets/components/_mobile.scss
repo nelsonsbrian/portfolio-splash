@@ -3,18 +3,6 @@
 
 // Desktops & Laptops
 @include mediaLg {
-  #about {
-    .about-info {
-      grid-template-areas:
-        "bioimage"
-        "bio"
-        "job1"
-        "job2"
-        "job3";
-      grid-template-columns: 1fr;
-    }
-  }
-
   #nav-header {
     height: 60px;
     .menu-nav {
@@ -96,17 +84,27 @@
     }
 
     .about-info {
-      grid-template-areas:
-        "bioimage"
-        "bio"
-        "job1"
-        "job2"
-        "job3";
-      grid-template-columns: 1fr;
+      .job {
+        &-card {
+          display: block;
+        }
+        &-header {
+          display: block;
+          width: 230px;
+          margin: auto;
+          margin-top: 15px;
+        }
+        &-content {
+          border: none;
+          .job-points {
+            border-top: $secondary-color 3px solid;
+            padding-top: 5px;
+          }
+        }
+      }
     }
   }
 
-  grid-template-columns: auto repeat(3, 1fr) auto;
   #work {
     .lg-heading {
       font-size: 60px;
@@ -173,13 +171,6 @@
     .sm-heading {
       text-align: center;
     }
-
-    .about-info {
-      .bio-photo {
-        width: 150px;
-        height: 150px;
-      }
-    }
   }
 
   .header {
@@ -187,6 +178,12 @@
       &-nav {
         padding-bottom: 0px;
       }
+    }
+  }
+
+  .about-info {
+    .bio > p {
+      font-size: 1.2rem;
     }
   }
 }
