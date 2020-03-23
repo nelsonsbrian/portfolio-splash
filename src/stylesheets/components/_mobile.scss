@@ -97,9 +97,14 @@
         &-content {
           border: none;
           .job-points {
-            border-top: $secondary-color 3px solid;
-            padding-top: 5px;
           }
+          .job-technologies {
+            // padding-top: 10px;
+            border-top: $secondary-color 3px solid;
+          }
+        }
+        &-position {
+          margin-bottom: 15px;
         }
       }
     }
