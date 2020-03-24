@@ -2,12 +2,11 @@
 
 This is my portfolio page that really expands upon my resume and demonstrations what I can produce as a developer. Not just the website itself, but the projects hosted as well. Please look around and look into the projecrts.
 
-# Live Demo
+## Live Demo
 
-Check out the live hosting: nelsonsbrian.com. 
+Check out the live hosting: https://nelsonsbrian.com
 
-
-### Installing & Setup
+## Installing & Setup
 
 If you're looking at hosting this locally, you'll need to install NodeJS.
 
