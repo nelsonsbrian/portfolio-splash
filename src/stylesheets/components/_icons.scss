@@ -1,9 +1,9 @@
 .icons {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 2rem;
+  margin: 50px 1rem 90px 1rem;
   a {
     padding: 0.4rem;
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
     color: set-text-color($primary-color);
     &:hover {
       color: $secondary-color;
@@ -14,20 +14,7 @@
 
 #nav-header {
   .icons {
-    display: inline;
+    margin-top: 1rem;
     float: right;
-    a {
-      margin-right: 0.6rem;
-    }
-  }
-}
-
-.header {
-  .icons {
-    margin-top: 0px;
-    margin-bottom: 90px;
-    a {
-      margin-right: 1.6rem;
-    }
   }
 }

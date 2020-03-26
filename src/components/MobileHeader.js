@@ -34,13 +34,13 @@ const MobileHeader = () => {
         className="nav-link">Projects
         </NavLink>,
       <div>
-      <a className="nav-link" target="_blank
+        <a className="nav-link" target="_blank
       " href="/files/Brian_Nelson_Resume.pdf">
-        Resume
+          Resume
       </a>
       </div>,
       <div className="nav-icons">
-        <Icons size='1'/>
+        <Icons />
       </div>
     ];
     const slideRight = useTrail(links.length, {

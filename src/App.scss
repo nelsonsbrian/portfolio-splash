@@ -41,7 +41,7 @@ $background-opacity: 0.9;
 
 @mixin background {
   @if $show-home-image {
-    background: rgba($primary_color, $background-opacity);
+    background: darken(rgba($primary_color, $background-opacity), 30);
 
     &:after {
       content: "";

@@ -21,8 +21,6 @@
     font-weight: 500;
     font-size: 40px;
     margin-bottom: 10px;
-    background: lighten($primary-color, 2);
-    box-shadow: lighten($primary-color, 2) 0px 0px 15px 5px;
   }
 
   .about-info {
@@ -52,7 +50,7 @@
         align-items: center;
         justify-content: center;
         min-width: 230px;
-        background: darken($primary-color, 1.5);
+        background: darken($primary-color, 8);
       }
 
       &-content {
