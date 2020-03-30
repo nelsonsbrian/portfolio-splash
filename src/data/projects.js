@@ -9,6 +9,15 @@ export const ProjectData = [
     techIcons: ['fab fa-js', 'fab fa-react', null],
   },
   {
+    name: "Portfolio",
+    description: "This Webpage! The portfolio page adds all my work experience and live projects while displaying them in a neat and organized way. This site also displays the hosted content on my own server.",
+    projectLink: 'https://nelsonsbrian.com',
+    githubLink: 'https://github.com/nelsonsbrian/portfolio-splash',
+    image: 'portfolio.png',
+    technologies: ['React', 'SCSS', 'Ngnix', 'DigitalOcean'],
+    techIcons: ['fab fa-js', 'fab fa-react', null],
+  },
+  {
     name: "Ultimate TicTacToe",
     description: "A game combining 9 regular games of tic-tac-toe, albeit with new rules.",
     projectLink: 'https://projects.nelsonsbrian.com/tictactoe',
