@@ -4,7 +4,11 @@ This is my portfolio page that really expands upon my resume and demonstrations 
 
 ## Live Demo
 
-Check out the live hosting: https://nelsonsbrian.com
+**Check out the live hosting: https://nelsonsbrian.com**
+
+## Screenshot
+
+![portfolio splash](public/img/portfolio.png "screenshot of main page of the portfolio")
 
 ## Installing & Setup
 
