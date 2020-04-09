@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { JobData } from '../data/jobs';
 import { EducationData } from '../data/education';
 
@@ -72,6 +72,23 @@ const EducationCard = ({ education }) => {
 }
 
 export default function About() {
+
+  useEffect(() => {
+    let cards;
+    cards = document.querySelectorAll('.job-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.isIntersecting ?
+          entry.target.style.animation = `anim-in .75s 0.25s forwards  ease-out` :
+          entry.target.style.animation = `none`;
+      });
+    }, { rootMargin: '100px', threshold: 0.4 });
+
+    cards.forEach(image => {
+      observer.observe(image)
+    })
+  }, []);
+
   return (
     <div id="about">
       <h1 className="lg-heading">

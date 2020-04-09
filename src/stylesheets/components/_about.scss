@@ -39,8 +39,6 @@
         background: lighten($primary-color, 5);
         border-bottom: $secondary-color 5px solid;
         border-top: $secondary-color 5px solid;
-        border-left: set-text-color($primary-color) 1px solid;
-        border-right: set-text-color($primary-color) 1px solid;
       }
 
       &-header {
@@ -129,8 +127,24 @@
         font-size: 20px;
         color: $secondary-color;
         text-align: center;
-        padding-bottom: .4em;
+        padding-bottom: 0.4em;
       }
     }
+  }
+}
+
+.job-card {
+  opacity: 0;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anim-in {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

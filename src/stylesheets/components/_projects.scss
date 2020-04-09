@@ -1,6 +1,7 @@
 #work {
   padding: 4rem;
   height: 100%;
+  min-height: 200vh;
   overflow: hidden;
 
   h1.lg-heading {
@@ -97,5 +98,18 @@
     @extend .btn;
     background: lighten($primary-color, 50);
     color: #333;
+  }
+}
+
+.project-card {
+  opacity: 0;
+}
+
+@keyframes anim-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

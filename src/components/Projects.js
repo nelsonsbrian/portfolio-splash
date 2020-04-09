@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ProjectData } from '../data/projects';
 import { Card, CardDeck, Button } from 'react-bootstrap';
 
@@ -6,7 +6,7 @@ const ProjectCard = ({ proj }) => {
   const { name, description, projectLink, githubLink, image, technologies } = proj;
   const imagePath = image ? `/img/${image}` : `https://via.placeholder.com/150`;
   return (
-    <Card style={{ width: '300px' }}>
+    <Card className='project-card' style={{ width: '300px' }}>
       <Card.Img variant="top"
         src={imagePath}
         alt={`${name} image`}
@@ -32,6 +32,21 @@ const ProjectCard = ({ proj }) => {
 
 
 const Projects = () => {
+  useEffect(() => {
+    let cards;
+    cards = document.querySelectorAll('.project-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.isIntersecting ?
+          entry.target.style.animation = `anim-in .75s 0.25s forwards  ease-out` :
+          entry.target.style.animation = `none`;
+      });
+    }, { rootMargin: '100px 0px', threshold: 0.4 });
+
+    cards.forEach(image => {
+      observer.observe(image)
+    })
+  }, []);
   return (
     <div id="work">
       <h1 className="lg-heading">
