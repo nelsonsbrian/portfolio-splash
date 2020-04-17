@@ -1,11 +1,20 @@
 export const ProjectData = [
   {
+    name: "Exile Web Client",
+    description: "Web Client that supports playing of the RanvierMud via websockets. Dynamically see your stats, socials, and maps extracted from the main output window. Complete with health/buff bars, party grid system, and quest windows!",
+    projectLink: 'https://github.com/nelsonsbrian/exile-client',
+    githubLink: 'https://github.com/nelsonsbrian/exile-client',
+    image: 'web-client-alpha8.png',
+    technologies: ['RanvierMud', 'React', 'Redux', 'SocketIO'],
+    techIcons: ['fab fa-js', 'fab fa-react', null],
+  },
+  {
     name: "Axon-OLC",
     description: "Online Creation editor for JSON/YAML files - Ranvier Bundle. Validates user input, cleans data, saves back to file. Allows non-developers to world build and add content in-game.",
     projectLink: 'https://projects.nelsonsbrian.com/axon-olc',
     githubLink: 'https://github.com/nelsonsbrian/axon-olc',
     image: 'axon-olc.png',
-    technologies: ['Ranvier', 'NodeJS', 'EventEmitter'],
+    technologies: ['RanvierMud', 'NodeJS', 'EventEmitter'],
     techIcons: ['fab fa-js', 'fab fa-react', null],
   },
   {
