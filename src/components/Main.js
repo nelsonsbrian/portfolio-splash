@@ -8,10 +8,10 @@ const Home = () => {
         Brian Nelson
         </h1>
       <h2 className="sm-heading">
-        Full-Stack Developer
+        Software Developer
         </h2>
       <h2 className="tech-stacks sm-heading-sec">
-        <span className="stack">JavaScript</span>
+        <span className="stack">TypeScript</span>
         <span className="dot"> &bull; </span>
         <span className="stack">NodeJS</span>
         <span className="dot"> &bull; </span>
